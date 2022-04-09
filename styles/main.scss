@@ -1,0 +1,30 @@
+.mgrid {
+    display: grid;
+}
+@for $w from 1 to 12 {
+    .mgrid-cols-#{$w} {
+        grid-template-columns: repeat($w, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 540px) {
+    @for $w from 1 to 12 {
+        .sm-mgrid-cols-#{$w} {
+            grid-template-columns: repeat($w, minmax(0, 1fr));
+        }
+    }
+}
+@media (min-width: 768px) {
+    @for $w from 1 to 12 {
+        .md-mgrid-cols-#{$w} {
+            grid-template-columns: repeat($w, minmax(0, 1fr));
+        }
+    }
+}
+@media (min-width: 1024px) {
+    @for $w from 1 to 12 {
+        .lg-mgrid-cols-#{$w} {
+            grid-template-columns: repeat($w, minmax(0, 1fr));
+        }
+    }
+}
